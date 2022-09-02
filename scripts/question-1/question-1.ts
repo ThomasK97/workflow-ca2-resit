@@ -4,11 +4,18 @@
 //  age: number
 //  isAdmin: boolean
 
+interface User{
+  firstName: string;
+  lastName: string;
+  age: number;
+  isAdmin: boolean;
+}
+
 // Convert the function to TypeScript, making sure to use the
 //  User interface as the return type
 
 function createUser(firstName: string, lastName:string, age:number, isAdmin: Boolean = false) {
-    return {
+    interface User {
       id: 0,
       firstName,
       lastName,
@@ -20,5 +27,5 @@ function createUser(firstName: string, lastName:string, age:number, isAdmin: Boo
   const newUser = createUser('Ola', 'Nordmann', 18);
   const newAdmin = createUser('Kari', 'Nordmann', 36, true);
   
-  console.log(newUser);
-  console.log(newAdmin);
+console.log(newUser);
+console.log(newAdmin);

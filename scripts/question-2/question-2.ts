@@ -5,11 +5,26 @@
 // - Adventure
 // - Sport
 
+enum GameGenre {
+  Action,
+  Adventure,
+  Sport
+};
+
+
 // 2. Create an interface (Game):
 // Create an interface called Game with the following values:
 // name: string
 // genre: The GameGenre enum
 // onlinePlay: boolean, optional
+
+interface Game {
+  name: string;
+  genre: GameGenre;
+  onlinePlay: boolean, optional;
+}
+
+
 
 // 3. Convert the function to TypeScript. Use your interface from above as the parameter.
 function createGame({ name, genre, onlinePlay = false }) {
@@ -20,6 +35,8 @@ function createGame({ name, genre, onlinePlay = false }) {
     console.log('Genre:', genre);
     console.log('Online play:', onlinePlay);
   }
+
+  
   
   // 4. Change these function calls to use the enum you created in step 1
   createGame({ name: 'Fun action game', genre: 'ACTION' });

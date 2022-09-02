@@ -1,9 +1,17 @@
+
 import { bread, cheese, lettuce, milk, tomato } from './item.js';
 
 // Create an interface called "Item" with the following variables and types:
 // id: number
 // name: string
 // price: number
+
+interface Item {
+  id: number;
+  name: string;
+  price: number;
+}
+
 
 export class ShoppingCart {
   // Add the correct array type to cart
