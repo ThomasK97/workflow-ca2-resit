@@ -14,18 +14,22 @@ interface User{
 // Convert the function to TypeScript, making sure to use the
 //  User interface as the return type
 
-function createUser(firstName: string, lastName:string, age:number, isAdmin: Boolean = false) {
-    interface User {
-      id: 0,
-      firstName,
-      lastName,
-      age,
-      isAdmin,
-    };
+class createUser {
+  firstName: string;
+  lastName: string;
+  age: number;
+  isAdmin: boolean;
+
+  constructor (firstName: string, lastName: string, age: number, isAdmin: boolean) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.isAdmin = isAdmin;
   }
-  
-  const newUser = createUser('Ola', 'Nordmann', 18);
-  const newAdmin = createUser('Kari', 'Nordmann', 36, true);
-  
+}
+
+const newUser: User = new createUser('Ola', 'Nordmann', 18, false);
+const newAdmin: User = new createUser('Kari', 'Nordmann', 36, true);
+
 console.log(newUser);
 console.log(newAdmin);
